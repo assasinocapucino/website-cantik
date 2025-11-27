@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Cantik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #ffe6f2;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        nav {
+            background-color: #ff99c8;
+            padding: 15px;
+        }
+        nav ul {
+            margin: 0; padding: 0;
+            list-style: none; display: flex;
+        }
+        nav ul li { margin-right: 20px; }
+        nav ul li a {
+            color: white; text-decoration: none;
+            font-weight: bold; font-size: 16px;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover { color: #ffe6f2; }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255,105,180,0.2);
+            animation: popUp 1s ease;
+        }
+        @keyframes popUp {
+            from { transform: scale(0.8); opacity: 0;}
+            to   { transform: scale(1); opacity: 1;}
+        }
+        h1 {
+            margin-top: 0;
+            color: #ff4da6;
+            text-align: center;
+        }
+        p { line-height: 1.6; font-size: 17px; }
+
+        .cute-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 25px;
+            background: #ff99c8;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: 0.3s;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50%      { transform: translateY(-7px);}
+        }
+        .cute-btn:hover { background: #ff4da6; }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #ff99c8;
+            color: white;
+        }
+        .bear-img {
+            display: block;
+            margin: 25px auto;
+            width: 190px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%,100% { transform: translateY(0); }
+            50%     { transform: translateY(-10px);}
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Pesan Cantik</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Website Cantik Penuh Pujian</h1>
+        <img class="bear-img" src="https://i.imgur.com/2nCt3Sb.png" alt="Beruang Lucu">
+        <p>
+            Selamat datang di website dengan sentuhan pink dan pujian cantik.<br>
+            Kamu bisa menelusuri halaman penuh kehangatan dan pesan manis.<br>
+            Jangan lupa mampir ke <a href="kontak.html" style="color:#ff4da6; font-weight:bold;">halaman kontak</a> untuk kirim pesan 💌.
+        </p>
+        <a class="cute-btn" href="kontak.html">Kirim Pesan Cantik ✨</a>
+    </div>
+    
+    <div class="footer">
+        Dibuat dengan penuh cinta, warna pink, dan animasi lucu.
+    </div>
+
+</body>
+</html>

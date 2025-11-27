@@ -3,70 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Cantik</title>
+    <title>Kontak - Website Cantik</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
             background: #ffe6f2;
             animation: fadeIn 1.2s ease-in-out;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         nav {
             background-color: #ff99c8;
             padding: 15px;
+            animation: slideDown 1s ease;
         }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         nav ul {
-            margin: 0; padding: 0;
-            list-style: none; display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
         }
-        nav ul li { margin-right: 20px; }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
         nav ul li a {
-            color: white; text-decoration: none;
-            font-weight: bold; font-size: 16px;
-            transition: color 0.3s;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
         }
-        nav ul li a:hover { color: #ffe6f2; }
+
+        nav ul li a:hover {
+            color: #ffe6f2;
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 600px;
             margin: 40px auto;
             background: white;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(255,105,180,0.2);
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
             animation: popUp 1s ease;
         }
+
         @keyframes popUp {
-            from { transform: scale(0.8); opacity: 0;}
-            to   { transform: scale(1); opacity: 1;}
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
+
         h1 {
             margin-top: 0;
             color: #ff4da6;
             text-align: center;
         }
-        p { line-height: 1.6; font-size: 17px; }
+
+        .contact-info {
+            background: #ffd1e8;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 2px solid #ff99c8;
+            color: #ff4da6;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ff4da6;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ff99c8;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #ff4da6;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
 
         .cute-btn {
             display: inline-block;
             padding: 12px 25px;
-            margin-top: 25px;
             background: #ff99c8;
             color: white;
             text-decoration: none;
             border-radius: 25px;
             font-size: 18px;
-            transition: 0.3s;
+            border: none;
+            cursor: pointer;
             animation: bounce 1.5s infinite;
+            transition: 0.3s;
         }
+
         @keyframes bounce {
-            0%, 100% { transform: translateY(0);}
-            50%      { transform: translateY(-7px);}
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-7px); }
         }
-        .cute-btn:hover { background: #ff4da6; }
+
+        .cute-btn:hover {
+            background: #ff4da6;
+        }
 
         .footer {
             text-align: center;
@@ -75,20 +142,9 @@
             background: #ff99c8;
             color: white;
         }
-        .bear-img {
-            display: block;
-            margin: 25px auto;
-            width: 190px;
-            animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%,100% { transform: translateY(0); }
-            50%     { transform: translateY(-10px);}
-        }
     </style>
 </head>
 <body>
-
     <nav>
         <ul>
             <li><a href="index.html">Beranda</a></li>
@@ -99,19 +155,32 @@
     </nav>
 
     <div class="container">
-        <h1>Website Cantik Penuh Pujian</h1>
-        <img class="bear-img" src="https://i.imgur.com/2nCt3Sb.png" alt="Beruang Lucu">
-        <p>
-            Selamat datang di website dengan sentuhan pink dan pujian cantik.<br>
-            Kamu bisa menelusuri halaman penuh kehangatan dan pesan manis.<br>
-            Jangan lupa mampir ke <a href="kontak.html" style="color:#ff4da6; font-weight:bold;">halaman kontak</a> untuk kirim pesan 💌.
-        </p>
-        <a class="cute-btn" href="kontak.html">Kirim Pesan Cantik ✨</a>
+        <h1>Kontak Cantik 💌</h1>
+        <div class="contact-info">
+            Hubungi aku langsung di WhatsApp:<br>
+            <a href="https://wa.me/6281234201339" style="color:#ff4da6; font-weight:bold; text-decoration:underline;">0812-3420-1339</a>
+            <br><br>
+            Atau kirim email ke: 
+            <a href="mailto:zainindo.facebook@gmail.com" style="color:#ff4da6; font-weight:bold; text-decoration:underline;">
+                zainindo.facebook@gmail.com
+            </a>
+        </div>
+        <form class="contact-form" action="mailto:zainindo.facebook@gmail.com" method="POST" enctype="text/plain">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama kamu cantik..." required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email kamu" required>
+            
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="Tulis pesan cantikmu di sini..." required></textarea>
+            
+            <button type="submit" class="cute-btn">Kirim Pesan Cantik ✨</button>
+        </form>
     </div>
-    
+
     <div class="footer">
         Dibuat dengan penuh cinta, warna pink, dan animasi lucu.
     </div>
-
 </body>
 </html>
